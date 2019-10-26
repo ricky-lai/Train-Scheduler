@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Train Scheduler</title>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Custom CSS file -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+  <!-- Moment.js Reference! -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Div containing the entire page -->
+  <div class="container">
+
+    <!-- Header for page -->
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="assets/images/train.jpg" alt="Graphitti Train" width="100%" class="cityPic">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center"><strong>Trap Money Beni Train Co.</strong></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="text-center">Fastest Transportation Around</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contains both tables on page -->
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <!-- Current scheduled trains -->
+        <div class="panel panel-primary">
+
+          <!-- Current train table header -->
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+          </div>
+
+          <!-- Current train table content -->
+          <div class="panel-body">
+            <table class="table table-hover" id="train-table">
+              <thead>
+                <tr>
+                  <th>Train Name</th>
+                  <th>Destination</th>
+                  <th>Frequency (minutes)</th>
+                  <th>Next Arrival</th>
+                  <th>Minutes Away</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- Add a new train -->
+        <div class="panel panel-primary">
+
+          <!-- Add a new train table header -->
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Add a Train</strong></h3>
+          </div>
+
+          <!-- Add a new train table content -->
+          <div class="panel-body">
+
+            <!-- Form that takes the user input for new trains -->
+            <form>
+              <div class="form-group">
+                <label>Train Name</label>
+                <input class="form-control" id="train-name-input" type="text">
+              </div>
+              <div class="form-group">
+                <label>Destination</label>
+                <input class="form-control" id="destination-input" type="text">
+              </div>
+              <div class="form-group">
+                <label>First Train Time (HH:mm - military time)</label>
+                <input class="form-control" id="first-train-input" type="text">
+              </div>
+              <div class="form-group">
+                <label>Frequency (minutes)</label>
+                <input class="form-control" id="frequency-input" type="text">
+              </div>
+              <button class="btn" id="add-train-btn" type="submit">Submit</button>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Link to the external JavaScript -->
+  <script type="text/javascript" src="assets/app.js"></script>
+
+</body>
+
+
+</html>
